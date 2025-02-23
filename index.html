@@ -1,228 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon"  >
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
     <title>COBLAN</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header id="header" class="header sticky-top">
-        <div class="topbar d-flex align-items-center bg-dark">
+      <div class="topbar d-flex align-items-center bg-dark">
+        <div
+          class="container d-flex justify-content-center justify-content-md-between"
+        >
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center"
+              ><a href="mailto:info@coblan.org">info@coblan.org</a></i
+            >
+            <i class="bi bi-phone d-flex align-items-center ms-4"
+              ><span>02923 - 507590</span></i
+            >
+          </div>
+          <div class="social-links d-none d-md-flex align-items-center">
+            <a href="https://wa.me/5492923507590" target="_blank"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
+            <a href="https://www.instagram.com/" class="instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="branding d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <h1 class="sitename">COBLAN</h1>
+          </a>
+
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="#hero" class="active">Inicio</a></li>
+              <li><a href="#about">Sobre Nosotros</a></li>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#contact">Contacto</a></li>
+              <img
+                src="/assets/logo.png"
+                alt="logo"
+                class="logo-menu-responsieve"
+              />
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Contenido principal -->
           <div
-            class="container d-flex justify-content-center justify-content-md-between"
+            class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+            data-aos="zoom-out"
           >
-            <div class="contact-info d-flex align-items-center">
-              <i class="bi bi-envelope d-flex align-items-center"
-                ><a href="mailto:info@coblan.org"
-                  >info@coblan.org</a
-                ></i
-              >
-              <i class="bi bi-phone d-flex align-items-center ms-4"
-                ><span>02923 - 507590</span></i
-              >
-            </div>
-            <div class="social-links d-none d-md-flex align-items-center">
-              <a href="https://wa.me/5492923507590" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <h1>
+              ¡Bienvenidos a
+              <span class="text-warning-emphasis">Coblan</span>!
+            </h1>
+            <p>
+              Brindamos soluciones profesionales de limpieza y mantenimiento
+              para hogares, oficinas, comercios y empresas. ¡Contratá personal
+              registrado y evitá complicaciones legales!
+            </p>
+            <div class="d-flex">
+              <a href="#services" class="btn-get-started">Nuestros Servicios</a>
               <a
-                href="https://www.instagram.com/"
-                class="instagram"
+                href="https://wa.me/5492923507590"
+                class="btn-waths-app d-flex align-items-center"
+              >
+                <i class="bi bi-whatsapp"></i><span>Contáctanos</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Imagen representativa -->
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img
+              src="assets/logo.png "
+              class="img-fluid w-100 text-info"
+              alt="Servicio de limpieza"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          <span>Conoce Más</span>
+          <span class="description-title">Sobre Nosotros</span>
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-3">
+          <!-- Imagen representativa -->
+          <div
+            class="col-lg-6 d-flex justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="assets/img/limpieza.jpg"
+              alt="Sobre Coblan"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+
+          <!-- Contenido de la empresa -->
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="about-content ps-0 ps-lg-3">
+              <h3>Una Empresa Emergente con una Visión Clara</h3>
+              <p class="fst-italic">
+                En <strong>Coblan</strong>, somos una
+                <strong>empresa emergente</strong> con el propósito de
+                revolucionar el sector de la limpieza con un servicio
+                profesional, confiable y accesible. Nacimos con la misión de
+                ofrecer soluciones de limpieza que brinden tranquilidad y
+                bienestar a nuestros clientes, asegurando un entorno impecable
+                en hogares, oficinas, comercios y empresas.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle"></i>
+                  <div>
+                    <h4>Personal Registrado</h4>
+                    <p>
+                      Gestionamos todo el proceso administrativo, asegurando un
+                      servicio 100% legal y sin preocupaciones.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-shield-lock"></i>
+                  <div>
+                    <h4>Confianza y Seguridad</h4>
+                    <p>
+                      Nuestro equipo está capacitado para garantizar un ambiente
+                      limpio, saludable y seguro.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-award"></i>
+                  <div>
+                    <h4>Calidad Garantizada</h4>
+                    <p>
+                      Nos comprometemos a ofrecer altos estándares de higiene y
+                      supervisión constante en cada servicio.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <p>
+                Como <strong>empresa emergente</strong>, nuestro compromiso es
+                crecer junto a nuestros clientes, innovando y adaptándonos a sus
+                necesidades. En <strong>Coblan</strong>, no solo limpiamos
+                espacios, sino que creamos ambientes ordenados y saludables para
+                el bienestar de todos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Servicios</h2>
+        <p class="services-title">
+          <span>Descubre Nuestros</span>
+          <span class="description-title-services">Servicios de Limpieza</span>
+        </p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Servicio: Limpieza General -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-house-door"></i>
+              </div>
+              <div class="stretched-link">
+                <h3>Limpieza General</h3>
+              </div>
+              <p>
+                Mantenemos la higiene y el orden en espacios principales con
+                tareas de barrido, aspirado, limpieza de muebles, pisos,
+                cristales, baños y cocinas.
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <!-- Servicio: Limpieza Profunda -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-brush"></i>
+              </div>
+              <div class="stretched-link">
+                <h3>Limpieza Profunda</h3>
+              </div>
+              <p>
+                Realizamos una limpieza exhaustiva en áreas específicas,
+                incluyendo paredes, ventanas, azulejos, campanas, hornos y
+                eliminación de sarro.
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+          <!-- Servicio: Limpieza Final de Obra -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-hammer"></i>
+              </div>
+              <div class="stretched-link">
+                <h3>Limpieza Final de Obra</h3>
+              </div>
+              <p>
+                Eliminamos escombros, residuos y suciedad acumulada durante la
+                construcción o remodelación, dejando el espacio listo para su
+                uso.
+              </p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+          <div class="container mt-5">
+            <div class="row">
+              <div
+                class="col-lg-12 d-flex justify-content-center flex-column align-items-center"
+                data-aos="fade-up"
+              >
+                <h3 class="text-white">Información importante!</h3>
+                <ul class="benefit-list">
+                  <li class="text-white">
+                    <i class="bi bi-exclamation-circle"></i> Pago al iniciar el
+                    servicio.
+                  </li>
+                  <li class="text-white">
+                    <i class="bi bi-exclamation-circle"></i> Mínimo de 8 horas
+                    mensuales de contratación.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section trabajadores y clientes beneficios -->
+    <section id="benefits" class="benefits section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Beneficios</h2>
+        <p>
+          <span>Descubre los Beneficios de </span>
+          <span class="description-title"
+            >¡Ser parte de nuestra comunidad!</span
+          >
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4 d-flex justify-content-center">
+          <!-- Beneficios para Clientes -->
+          <div
+            class="col-lg-4 col-md-12 mt-2"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="benefit-box">
+              <h3>
+                Beneficios para Clientes <i class="bi bi-person-check"></i>
+              </h3>
+              <ul class="beneficios">
+                <li>
+                  <i class="bi bi-check-circle"></i> ¡De los papeles nos
+                  encargamos nosotros!
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Contrata personal
+                  registrado y evitá problemas legales.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Facturación mensual clara y
+                  sin sorpresas.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Solo pagás por el servicio
+                  contratado.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Productos de limpieza
+                  opcionales.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Supervisión garantizada
+                  para mayor tranquilidad.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Beneficios para Trabajadores -->
+          <div
+            class="col-lg-4 col-md-12 mt-2"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="benefit-box">
+              <h3>
+                Beneficios para Trabajadores <i class="bi bi-briefcase"></i>
+              </h3>
+              <ul class="beneficios">
+                <li>
+                  <i class="bi bi-check-circle"></i> Trabajo registrado con
+                  estabilidad laboral.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Derecho a vacaciones pagas.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> Aguinaldo garantizado.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <!-- Información de la empresa -->
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="d-flex align-items-center">
+              <span class="sitename">Coblan</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Casbas,</p>
+              <p>Buenos Aires, Argentina</p>
+              <p class="mt-3">
+                <strong>Teléfono:</strong> <span>2392 - 567560</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@coblan.org</span></p>
+            </div>
+          </div>
+
+          <!-- Enlaces Útiles -->
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Enlaces Útiles</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i> <a href="#">Inicio</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#about">Sobre Nosotros</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#services">Nuestros Servicios</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Servicios -->
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Servicios</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#services">Limpieza General</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#services">Limpieza Profunda</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#services">La limpieza final de obra</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Redes Sociales -->
+          <div class="col-lg-4 col-md-12">
+            <h4>Síguenos</h4>
+            <p>
+              ¡Conéctate con nosotros en nuestras redes sociales para recibir
+              novedades y promociones exclusivas!
+            </p>
+            <div class="social-links d-flex">
+              <a href="https://www.instagram.com/" target="_blank"
                 ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="https://wa.me/5492923507590" target="_blank"
+                ><i class="bi bi-whatsapp"></i
               ></a>
             </div>
           </div>
         </div>
-  
-        <div class="branding d-flex align-items-center">
-          <div class="container d-flex justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <h1 class="sitename">COBLAN</h1>
-            </a>
-  
-            <nav id="navmenu" class="navmenu">
-              <ul>
-                <li><a href="#hero" class="active">Inicio</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#contact">Contacto</a></li>
-                <img src="/assets/logo.png" alt="logo" class="logo-menu-responsieve">
-              </ul>
-              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-          </div>
-        </div>
-      </header>
-
-
-      <section id="hero" class="hero section light-background">
-        <div class="container">
-          <div class="row gy-4">
-            <!-- Contenido principal -->
-            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
-              data-aos="zoom-out">
-              <h1>
-                ¡Bienvenidos a 
-                <span class="text-warning-emphasis">Coblan</span>!
-              </h1>
-              <p>
-                Brindamos soluciones profesionales de limpieza y mantenimiento para 
-                hogares, oficinas, comercios y empresas. ¡Contratá personal registrado 
-                y evitá complicaciones legales!
-              </p>
-              <div class="d-flex">
-                <a href="#services" class="btn-get-started">Nuestros Servicios</a>
-                <a href="https://wa.me/5492923507590" 
-                   class=" btn-waths-app d-flex align-items-center">
-                  <i class="bi bi-whatsapp"></i><span>Contáctanos</span>
-                </a>
-              </div>
-            </div>
-      
-            <!-- Imagen representativa -->
-            <div class="col-lg-6 order-1 order-lg-2 text-center">
-              <img src="assets/logo.png "
-                class="img-fluid w-100 text-info" 
-                alt="Servicio de limpieza">
-            </div>
-          </div>
-        </div>
-      </section>
-      
-    
-
-
-
-
-      <footer id="footer" class="footer">
-        <div class="container footer-top">
-          <div class="row gy-4">
-            <!-- Información de la empresa -->
-            <div class="col-lg-4 col-md-6 footer-about">
-              <a href="index.html" class="d-flex align-items-center">
-                <span class="sitename">Coblan</span>
-              </a>
-              <div class="footer-contact pt-3">
-                <p>Casbas,</p>
-                <p>Buenos Aires, Argentina</p>
-                <p class="mt-3">
-                  <strong>Teléfono:</strong> <span>2392 - 567560</span>
-                </p>
-                <p>
-                  <strong>Email:</strong> <span>info@coblan.org</span>
-                </p>
-              </div>
-            </div>
-      
-            <!-- Enlaces Útiles -->
-            <div class="col-lg-2 col-md-3 footer-links">
-              <h4>Enlaces Útiles</h4>
-              <ul>
-                <li>
-                  <i class="bi bi-chevron-right"></i> <a href="#">Inicio</a>
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="#about">Sobre Nosotros</a>
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="#services">Nuestros Servicios</a>
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="#contact">Contacto</a>
-                </li>
-              </ul>
-            </div>
-      
-            <!-- Servicios -->
-            <div class="col-lg-2 col-md-3 footer-links">
-              <h4>Servicios</h4>
-              <ul>
-                <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="#services">Limpieza General</a>
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="#services">Limpieza Profunda</a>
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="#services">Domicilios Particulares</a>
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right"></i>
-                  <a href="#services">Empresas y Comercios</a>
-                </li>
-              </ul>
-            </div>
-      
-            <!-- Redes Sociales -->
-            <div class="col-lg-4 col-md-12">
-              <h4>Síguenos</h4>
-              <p>
-                ¡Conéctate con nosotros en nuestras redes sociales para recibir 
-                novedades y promociones exclusivas!
-              </p>
-              <div class="social-links d-flex">
-                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://wa.me/5492923507590" target="_blank"><i class="bi bi-whatsapp"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Copyright y créditos -->
-        <div class="container copyright text-center mt-4">
-          <p>
-            © <span>Copyright</span>
-            <strong class="px-1 sitename">Coblan</strong>
-            <span>Todos los Derechos Reservados</span>
-          </p>
-          <div class="credits">
-            Diseñado por <span class="text-info">Imperial Net - 2923-530179</span>
-          </div>
-        </div>
-      </footer>
-      
-      <!-- Scroll Top -->
-      <a
-        href="#"
-        id="scroll-top"
-        class="scroll-top d-flex align-items-center justify-content-center"
-        ><i class="bi bi-arrow-up-short"></i
-      ></a>
-  
-      <!-- Preloader -->
-      <div id="preloader">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
-  
-  
-      <div class="floating-buttons">
-        <!-- Botón de WhatsApp -->
-        <a href="https://wa.me/5492923507590" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-  
-        <!-- Botón de Instagram -->
-        <a href="https://www.instagram.com/" target="_blank" class="instagram">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-        </a>
-    </div>
-  
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <!-- Copyright y créditos -->
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Coblan</strong>
+          <span>Todos los Derechos Reservados</span>
+        </p>
+        <div class="credits">
+          Diseñado por <span class="text-info">Imperial Net - 2923-530179</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="floating-buttons">
+      <!-- Botón de WhatsApp -->
+      <a href="https://wa.me/5492923507590" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+        />
+      </a>
+
+      <!-- Botón de Instagram -->
+      <a href="https://www.instagram.com/" target="_blank" class="instagram">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+          alt="Instagram"
+        />
+      </a>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
