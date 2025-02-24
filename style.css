@@ -34,6 +34,25 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
 }
+.floating-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+/* Facebook (azul) */
+.floating-buttons a.facebook {
+  background-color: #1877F2; /* Azul oficial de Facebook */
+}
+
 
 .floating-buttons a.instagram {
   background-color: #E1306C; /* Color para Instagram */
@@ -1448,88 +1467,92 @@ a{
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
   background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 15px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 25px;
   border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
   overflow: hidden;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s;
+
 }
 
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq .faq-container .faq-item h3 {
+.faq-item h3 {
   font-weight: 600;
   font-size: 18px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease-in-out;
+
+  
+}
+.faq{
+  padding-bottom: 20px;
+  
 }
 
-.faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
+.faq-item .faq-content {
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
+  padding-left: 15px;
+  
 }
 
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.faq .faq-container .faq-active h3 {
-  color: var(--contrast-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
+.faq-item.faq-active .faq-content {
   opacity: 1;
   padding-top: 10px;
 }
 
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
+.faq-item .faq-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.faq-item .faq-toggle:hover {
   color: var(--accent-color);
 }
+
+.faq-item.faq-active, .faq-item.faq-active h3 {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+
+.faq-item.faq-active .faq-toggle {
+  transform: rotate(180deg);
+}
+
+.faq-subtitle{
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  color: var(--color);
+}
+
+@media (max-width: 575px) {
+  .item-3 h3{
+    padding-right: 20px;
+
+  }
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Contact Section
