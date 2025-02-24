@@ -41,8 +41,8 @@
               ><i class="bi bi-whatsapp"></i
             ></a>
             <a href="https://wa.me/5492923507590" target="_blank"
-            ><i class="bi bi-facebook"></i
-          ></a>
+              ><i class="bi bi-facebook"></i
+            ></a>
             <a href="https://www.instagram.com/" class="instagram"
               ><i class="bi bi-instagram"></i
             ></a>
@@ -61,6 +61,7 @@
               <li><a href="#hero" class="active">Inicio</a></li>
               <li><a href="#about">Sobre Nosotros</a></li>
               <li><a href="#services">Servicios</a></li>
+              <li><a href="#work-with-us">Presupuestos</a></li>
               <li><a href="#contact">Contacto</a></li>
               <li><a href="#faq">Preguntas Frecuentes</a></li>
               <img
@@ -90,8 +91,8 @@
             </h1>
             <p>
               Brindamos soluciones profesionales de limpieza y mantenimiento
-              para hogares, oficinas, comercios y empresas. ¡Contratá personal
-              registrado y evitá complicaciones legales!
+              para hogares, hoteles, oficinas, comercios, eventos y empresas.
+              ¡Contratá personal registrado y evitá complicaciones legales!
             </p>
             <div class="d-flex">
               <a href="#services" class="btn-get-started">Nuestros Servicios</a>
@@ -385,6 +386,147 @@
       </div>
     </section>
 
+    <!-- Sección Solicitar Presupuesto y Trabaja con Nosotros -->
+    <section id="work-with-us" class="work-with-us section dark-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Únete a Nosotros</h2>
+        <p class="text-white">
+          <span>Solicita un Presupuesto o</span>
+          <span class="description-title">Trabaja con Nosotros</span>
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4 d-flex justify-content-center">
+          <!-- Solicitar Presupuesto -->
+          <div
+            class="col-lg-5 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="info-box">
+              <i class="bi bi-file-text"></i>
+              <h3>Solicita un Presupuesto</h3>
+              <p>
+                Déjanos tus datos y requerimientos, y te enviaremos un
+                presupuesto sin costo.
+              </p>
+              <a href="solicitar-presupuesto.html" class="btn btn-accent">
+                Solicitar Presupuesto
+              </a>
+            </div>
+          </div>
+
+          <!-- Trabaja con Nosotros -->
+          <div
+            class="col-lg-5 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="info-box">
+              <i class="bi bi-briefcase"></i>
+              <h3>¿Quieres Trabajar con Nosotros?</h3>
+              <p>
+                Completa el formulario y envíanos tu CV para ser parte de
+                nuestro equipo.
+              </p>
+              <a href="trabaja-con-nosotros.html" class="btn btn-primary">
+                Enviar CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="contact section dark-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contáctanos</h2>
+        <p class="text-white">
+          <span>¿Tienes dudas o necesitas más información?</span>
+          <span class="description-title">¡Escríbenos!</span>
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <form
+              action="procesar-formulario.php"
+              method="POST"
+              class="contact-form"
+            >
+              <div class="row">
+                <!-- Nombre -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nombre" class="text-white"
+                      >Nombre Completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      name="nombre"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email" class="text-white"
+                      >Correo Electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Asunto -->
+              <div class="form-group mt-3">
+                <label for="asunto" class="text-white">Asunto</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="asunto"
+                  name="asunto"
+                  required
+                />
+              </div>
+
+              <!-- Mensaje -->
+              <div class="form-group mt-3">
+                <label for="mensaje" class="text-white">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Botón de Enviar -->
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-accent">
+                  Enviar Mensaje
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Faq Section clientes -->
     <section id="faq" class="faq section light-background">
       <!-- Section Title -->
@@ -542,7 +684,7 @@
                   <p>
                     Proporcionamos indumentaria y artículos de seguridad para
                     desempeñar el trabajo de la manera más segura posible, los
-                    cuales deberán ser usados de manera obligatoria.
+                    cuales deberán ser utilizados de manera obligatoria.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -589,7 +731,7 @@
     <!-- /Faq Section -->
 
     <footer id="footer" class="footer">
-      <div class="container footer-top " data-aos="fade-up" data-aos-delay="100">
+      <div class="container footer-top" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <!-- Información de la empresa -->
           <div class="col-lg-4 col-md-6 footer-about">
@@ -620,6 +762,10 @@
               <li>
                 <i class="bi bi-chevron-right"></i>
                 <a href="#services">Nuestros Servicios</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#work-with-us">Solictiá un Presupuesto</a>
               </li>
               <li>
                 <i class="bi bi-chevron-right"></i>
@@ -660,8 +806,8 @@
             </p>
             <div class="social-links d-flex">
               <a href="https://www.facebook.com/" target="_blank"
-              ><i class="bi bi-facebook"></i
-            ></a>
+                ><i class="bi bi-facebook"></i
+              ></a>
               <a href="https://www.instagram.com/" target="_blank"
                 ><i class="bi bi-instagram"></i
               ></a>
@@ -703,10 +849,19 @@
     </div>
 
     <div class="floating-buttons">
-<!-- Botón de Facebook -->
-<a href="https://www.facebook.com/tuperfil" target="_blank" class="facebook">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30" />
-</a>
+      <!-- Botón de Facebook -->
+      <a
+        href="https://www.facebook.com/tuperfil"
+        target="_blank"
+        class="facebook"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="Facebook"
+          width="30"
+          height="30"
+        />
+      </a>
 
       <!-- Botón de WhatsApp -->
       <a href="https://wa.me/5492923507590" target="_blank">

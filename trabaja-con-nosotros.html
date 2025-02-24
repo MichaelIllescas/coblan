@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - Coblan</title>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+      <!-- Agrega AOS CSS en el <head> -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sección de Trabajo -->
+<section id="work" class="work section dark-background" data-aos="fade-up">
+    <div class="container section-title text-center">
+        <h2 >Trabaja con Nosotros</h2>
+        <p class="text-white">
+            Completa el formulario y envíanos tu CV para ser parte de nuestro equipo.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form id="work-form" class="work-form" enctype="multipart/form-data">
+                    <div class="row">
+                        <!-- Nombre y Apellido -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nombre" class="text-white">Nombre y Apellido</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                        </div>
+
+                        <!-- DNI -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="dni" class="text-white">DNI</label>
+                                <input type="text" class="form-control" id="dni" name="dni" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <!-- Domicilio -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="domicilio" class="text-white">Domicilio</label>
+                                <input type="text" class="form-control" id="domicilio" name="domicilio" required>
+                            </div>
+                        </div>
+
+                        <!-- Provincia -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="provincia" class="text-white">Provincia</label>
+                                <input type="text" class="form-control" id="provincia" name="provincia" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <!-- Localidad -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="localidad" class="text-white">Localidad</label>
+                                <input type="text" class="form-control" id="localidad" name="localidad" required>
+                            </div>
+                        </div>
+
+                        <!-- Código Postal -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="codigo_postal" class="text-white">Código Postal</label>
+                                <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <!-- Teléfono -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="telefono" class="text-white">Teléfono</label>
+                                <input type="text" class="form-control" id="telefono" name="telefono" required>
+                            </div>
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email" class="text-white">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Disponibilidad Horaria -->
+                    <div class="form-group mt-3">
+                        <label for="disponibilidad" class="text-white">Disponibilidad Horaria</label>
+                        <input type="text" class="form-control" id="disponibilidad" name="disponibilidad" required>
+                    </div>
+
+                    <!-- Estudios Alcanzados -->
+                    <div class="form-group mt-3">
+                        <label for="estudios" class="text-white">Estudios Alcanzados</label>
+                        <input type="text" class="form-control" id="estudios" name="estudios" required>
+                    </div>
+
+                    <!-- Habilidades -->
+                    <div class="form-group mt-3">
+                        <label for="habilidades" class="text-white">Habilidades</label>
+                        <textarea class="form-control" id="habilidades" name="habilidades" rows="2" required></textarea>
+                    </div>
+
+                    <!-- Acerca de mí -->
+                    <div class="form-group mt-3">
+                        <label for="acerca" class="text-white">Acerca de mí</label>
+                        <textarea class="form-control" id="acerca" name="acerca" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Experiencia Laboral -->
+                    <div class="form-group mt-3">
+                        <label for="experiencia" class="text-white">Experiencia Laboral</label>
+                        <textarea class="form-control" id="experiencia" name="experiencia" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Subir CV -->
+                    <div class="form-group mt-3">
+                        <label for="cv" class="text-white">Sube tu CV (PDF o Word)</label>
+                        <input type="file" class="form-control" id="cv" name="cv" accept=".pdf,.doc,.docx">
+                    </div>
+
+                    <!-- Mensaje de Confirmación -->
+                    <div id="confirmation-message" class="alert alert-success mt-4 d-none">
+                        ✅ Tu solicitud ha sido enviada con éxito. Nos pondremos en contacto contigo pronto.
+                    </div>
+
+                    <!-- Indicador de Carga -->
+                    <div id="loading-spinner" class="text-center mt-4 d-none">
+                        <div class="spinner-border text-light" role="status">
+                            <span class="visually-hidden">Enviando...</span>
+                        </div>
+                        <p class="text-white mt-2">Enviando solicitud...</p>
+                    </div>
+
+                    <!-- Botón de Enviar -->
+                    <div class="text-center mt-4">
+                        <button type="submit" id="submit-btn" class="btn btn-accent">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Botón Fijo para Volver al Inicio -->
+<a href="index.html" id="back-to-home" class="btn btn-light d-none">
+    <i class="bi bi-house-door"></i> Volver al Inicio
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- JavaScript para Manejo del Envío -->
+<script src="form-handler.js"></script>
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>
