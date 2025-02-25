@@ -1980,3 +1980,49 @@ a{
   color: var(--default-color);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+
+/* Mensaje de confirmación */
+#confirmation-message {
+  display: none; /* Se oculta por defecto */
+  background-color: #28a745; /* Verde éxito */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de salida */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Clase para ocultar con animación */
+.hidden {
+  animation: fadeOut 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}

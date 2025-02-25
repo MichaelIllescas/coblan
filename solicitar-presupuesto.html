@@ -5,147 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solicitar Presupuesto - Coblan</title>
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
-  <!-- Agrega AOS CSS en el <head> -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Sección de Presupuesto -->
     <section id="budget" class="budget section dark-background" data-aos="fade-up">
       <div class="container section-title text-center">
-        <h2 >Solicitar Presupuesto</h2>
-        <p class="text-white">
-          Completa el formulario con tus datos y nos pondremos en contacto
-          contigo.
-        </p>
+        <h2>Solicitar Presupuesto</h2>
+        <p class="text-white">Completa el formulario con tus datos y nos pondremos en contacto a la brevedad.</p>
       </div>
-
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <form id="budget-form" class="budget-form">
+            <form
+              action="https://formsubmit.co/ajax/joni.illes@hotmail.com"
+              method="POST" id="budget-form" class="budget-form">
               <div class="row">
-                <!-- Nombre y Apellido -->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="nombre" class="text-white"
-                      >Nombre y Apellido</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nombre"
-                      name="nombre"
-                      required
-                    />
+                    <label for="nombre" class="text-white">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required />
                   </div>
                 </div>
-
-                <!-- DNI -->
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="dni" class="text-white">DNI</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="dni"
-                      name="dni"
-                      required
-                    />
+                    <input type="text" class="form-control" id="dni" name="dni" required />
                   </div>
                 </div>
               </div>
-
               <div class="row mt-3">
-                <!-- Provincia -->
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="provincia" class="text-white">Provincia</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="provincia"
-                      name="provincia"
-                      required
-                    />
+                    <input type="text" class="form-control" id="provincia" name="provincia" required />
                   </div>
                 </div>
-
-                <!-- Localidad -->
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="localidad" class="text-white">Localidad</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="localidad"
-                      name="localidad"
-                      required
-                    />
+                    <input type="text" class="form-control" id="localidad" name="localidad" required />
                   </div>
                 </div>
               </div>
-
               <div class="row mt-3">
-                <!-- Código Postal -->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label for="codigo_postal" class="text-white"
-                      >Código Postal</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="codigo_postal"
-                      name="codigo_postal"
-                      required
-                    />
+                    <label for="codigo_postal" class="text-white">Código Postal</label>
+                    <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" required />
                   </div>
                 </div>
-
-                <!-- Teléfono -->
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="telefono" class="text-white">Teléfono</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="telefono"
-                      name="telefono"
-                      required
-                    />
+                    <input type="text" class="form-control" id="telefono" name="telefono" required />
                   </div>
                 </div>
               </div>
-
-              <!-- Correo Electrónico -->
+              
               <div class="form-group mt-3">
                 <label for="email" class="text-white">Correo Electrónico</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  required
-                />
+                <input type="email" class="form-control" id="email" name="email" required />
               </div>
-
-              <!-- Cantidad de Horas -->
+              <div class="form-group mt-3">
+                <label for="tipo_servicio" class="text-white">Tipo de Servicio</label>
+                <select class="form-control form-select" id="tipo_servicio" name="tipo_servicio" required>
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="limpieza_general">Limpieza General</option>
+                  <option value="limpieza_profunda">Limpieza Profunda</option>
+                  <option value="limpieza_fin_obra">Limpieza de Fin de Obra</option>
+                </select>
+              </div>
               <div class="form-group mt-3">
                 <label for="horas" class="text-white">Cantidad de Horas</label>
                 <select class="form-control form-select" id="horas" name="horas" required>
-                  <option value="" disabled selected>
-                    Selecciona una opción
-                  </option>
+                  <option value="" disabled selected>Selecciona una opción</option>
                   <option value="8">8 horas mensuales</option>
                   <option value="16">16 horas mensuales</option>
                   <option value="24">24 horas mensuales</option>
@@ -155,61 +91,47 @@
                   <option value="80">80 horas mensuales</option>
                   <option value="96">Media jornada: 96 horas mensuales</option>
                   <option value="120">120 horas mensuales</option>
-                  <option value="144">
-                    Jornada intermedia: 144 horas mensuales
-                  </option>
+                  <option value="144">Jornada intermedia: 144 horas mensuales</option>
                   <option value="160">160 horas mensuales</option>
-                  <option value="192">
-                    Jornada completa: 192 horas mensuales
-                  </option>
+                  <option value="192">Jornada completa: 192 horas mensuales</option>
                 </select>
               </div>
-
-              <!-- Mensaje de Confirmación -->
-              <div
-                id="confirmation-message"
-                class="alert alert-success mt-4 d-none"
-              >
-                ✅ Tu solicitud ha sido enviada con éxito. Nos pondremos en
-                contacto contigo pronto.
+               <!-- Captcha de FormSubmit -->
+              <div class="form-group mt-3">
+                <script
+                  src="https://www.google.com/recaptcha/api.js"
+                  async
+                  defer
+                ></script>
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6Lc1seEqAAAAAP2H7pzlB_hFa9A0vaVvIpwcWR3O"
+                ></div>
               </div>
-
-              <!-- Botón Fijo para Volver al Inicio -->
-              <a
-                href="index.html"
-                id="back-to-home"
-                class="btn btn-light d-none"
-              >
+             
+              <div id="confirmation-message" class="alert alert-success mt-4 d-none">
+                ✅ Tu solicitud ha sido enviada con éxito. Nos pondremos en contacto contigo pronto.
+              </div>
+              <a href="index.html" id="back-to-home" class="btn btn-light d-none">
                 <i class="bi bi-house-door"></i> Volver al Inicio
               </a>
-
-              <!-- Indicador de Carga -->
               <div id="loading-spinner" class="text-center mt-4 d-none">
                 <div class="spinner-border text-light" role="status">
                   <span class="visually-hidden">Enviando...</span>
                 </div>
                 <p class="text-white mt-2">Enviando solicitud...</p>
               </div>
-
-              <!-- Botón de Enviar -->
               <div class="text-center mt-4">
-                <button type="submit" id="submit-btn" class="btn btn-accent">
-                  Enviar Solicitud
-                </button>
+                <button type="submit" id="submit-btn" class="btn btn-accent">Enviar Solicitud</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- JavaScript para Manejo del Envío -->
     <script src="form-handler.js"></script>
-    <script>
-        AOS.init();
-      </script>
+    <script>AOS.init();</script>
   </body>
 </html>
