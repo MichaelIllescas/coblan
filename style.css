@@ -361,6 +361,9 @@ h6 {
     color: var(--nav-hover-color);
   }
 
+  .trabaja-con-nosotros{
+    background: var(--nav-dropdown-color)
+  }
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
